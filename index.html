@@ -93,7 +93,7 @@
   <!-- Performance: Resource Hints & Preloads -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500;1,600;1,700&family=Fondamento:ital@0;1&family=Marck+Script&display=swap">
   <link rel="preload" as="image" href="./Image/Hero-600w.webp" type="image/webp" media="(max-width: 850px)">
   <link rel="preload" as="image" href="./Image/Hero.webp" type="image/webp" media="(min-width: 851px)">
   <link rel="icon" type="image/png" href="./Image/Logo.png">
@@ -248,27 +248,21 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 6px 10px;
-      margin-bottom: 8px;
+      margin-bottom: 14px;
       text-transform: uppercase;
     }
 
-    .kicker h2 {
-      display: inline;
-      font-size: 14.5px;
-      font-weight: 800;
-      letter-spacing: .16em;
-      color: var(--green-dark);
-      margin: 0;
-      padding: 0;
-      line-height: 1;
-    }
-
     .kicker span:not(.kicker-dot) {
-      font-size: 11.5px;
-      font-weight: 600;
-      letter-spacing: .14em;
-      color: #6c7d6a;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      color: var(--green-dark);
+      background: rgba(79, 121, 66, 0.08);
+      border: 1px solid rgba(79, 121, 66, 0.18);
+      padding: 6px 16px;
+      border-radius: 20px;
       line-height: 1;
+      display: inline-block;
     }
 
     .kicker-dot {
@@ -278,11 +272,45 @@
       font-size: 13px;
     }
 
-    .hero h1 {
-      font-size: clamp(44px, 5.8vw, 86px);
-      line-height: 0.98;
-      letter-spacing: -.05em;
-      margin: 8px 0 16px;
+    .hero-brand {
+      margin: 4px 0 16px;
+      line-height: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand-shanthi {
+      display: block;
+      font-family: "Monotype Corsiva", "Apple Chancery", "ITC Zapf Chancery", "URW Chancery L", "Fondamento", "Playfair Display", cursive, serif;
+      font-size: clamp(74px, 10vw, 130px);
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: -0.01em;
+      color: var(--rose);
+      line-height: 0.92;
+    }
+
+    .brand-dental {
+      display: block;
+      font-family: "Monotype Corsiva", "Apple Chancery", "ITC Zapf Chancery", "URW Chancery L", "Fondamento", "Playfair Display", cursive, serif;
+      font-size: clamp(38px, 5.2vw, 66px);
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.01em;
+      color: var(--green);
+      line-height: 1.1;
+      margin-top: -2px;
+    }
+
+    .hero-tagline {
+      font-size: clamp(32px, 4.2vw, 54px);
+      line-height: 1.15;
+      letter-spacing: -.03em;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 18px 0 26px;
+      max-width: 540px;
     }
 
     .serif {
@@ -303,16 +331,28 @@
       display: flex;
       gap: 16px;
       align-items: center;
-      margin-top: 20px;
+      margin-top: 24px;
     }
 
     .primary {
       background: var(--green);
       color: #fff;
-      padding: 16px 22px;
+      padding: 18px 30px;
       border-radius: 40px;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 700;
+      letter-spacing: .02em;
+      box-shadow: 0 10px 24px rgba(48, 76, 41, .24);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .primary:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(48, 76, 41, .32);
     }
 
     .secondary {
@@ -1609,11 +1649,37 @@
         padding: 72px 5% 25px;
       }
 
-      .hero h1 {
-        font-size: clamp(30px, 8vw, 38px);
-        line-height: 1.08;
+      .kicker span:not(.kicker-dot) {
+        font-size: 11px;
+        padding: 5px 12px;
+      }
+
+      .hero-brand {
+        margin: 4px 0 12px;
+        gap: 2px;
+      }
+
+      .brand-shanthi {
+        font-size: clamp(54px, 15vw, 80px);
+        line-height: 0.92;
+      }
+
+      .brand-dental {
+        font-size: clamp(28px, 8vw, 42px);
+        line-height: 1.1;
+        margin-top: -2px;
+      }
+
+      .hero-tagline {
+        font-size: clamp(24px, 6.8vw, 32px);
+        line-height: 1.2;
         letter-spacing: -0.02em;
-        margin: 8px 0 16px;
+        margin: 14px 0 20px;
+      }
+
+      .primary {
+        padding: 14px 24px;
+        font-size: 13px;
       }
 
       .hero-text p {
@@ -1789,11 +1855,13 @@
     <div class="hero-grid">
       <div class="hero-text">
         <div class="kicker">
-          <h2>SHANTHI DENTAL CARE</h2>
-          <span class="kicker-dot">·</span>
           <span>DR. G. JAGANRAJ, BDS</span>
         </div>
-        <h1>A healthier smile.<br><span class="serif">Beautifully cared for.</span></h1>
+        <h1 class="hero-brand">
+          <span class="brand-shanthi">Shanthi</span>
+          <span class="brand-dental">Dental Care</span>
+        </h1>
+        <h2 class="hero-tagline">Excellence in <br><span class="serif">every smile.</span></h2>
         <div class="actions">
           <a class="primary" href="#treatments">Explore Treatments ↓</a>
         </div>
