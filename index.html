@@ -980,11 +980,54 @@
       margin: 0;
     }
 
-    /* ── Desktop: 3-column Grid (Same Layout as Treatments) ── */
+    /* ── Work Category Groups & Headers ── */
+    .work-group {
+      margin-bottom: 56px;
+    }
+
+    .work-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .work-group-header {
+      margin-bottom: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .work-group-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rose-soft);
+    }
+
+    .work-group-title {
+      font-size: clamp(20px, 3vw, 25px);
+      font-weight: 700;
+      color: #fffdf9;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .work-group-desc {
+      font-size: 14px;
+      color: #cfdbce;
+      margin: 0;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+
+    /* ── Desktop: 4-column Grid ── */
     .work-showcase {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
       position: relative;
     }
 
@@ -1580,6 +1623,11 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
       }
+
+      .work-showcase {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
     }
 
     /* ── Tablets & Small Laptops (max-width: 850px) ── */
@@ -1696,13 +1744,33 @@
         gap: 14px;
       }
 
-      /* Section 03: Old Mobile Slider View */
+      /* Section 03: Mobile Slider View */
       .work {
         padding: 70px 5% 55px;
       }
 
       .work-header {
         margin-bottom: 24px;
+      }
+
+      .work-group {
+        margin-bottom: 40px;
+      }
+
+      .work-group:last-child {
+        margin-bottom: 0;
+      }
+
+      .work-group-header {
+        margin-bottom: 16px;
+      }
+
+      .work-group-title {
+        font-size: 19px;
+      }
+
+      .work-group-desc {
+        font-size: 13px;
       }
 
       .work .title {
@@ -2610,155 +2678,229 @@
     <div class="work-header reveal">
       <div class="label">03 / OUR WORK</div>
       <h2 class="title">Real Results.<br><span class="serif">Real Confidence.</span></h2>
-      <p class="work-subtitle">Every smile tells a story. Explore authentic clinical outcomes from real patients —
-        achieved with precision, modern dentistry, and gentle care.</p>
+      <p class="work-subtitle">Every smile tells a story. Explore authentic clinical outcomes and diagnostic precision
+        from real patients —
+        achieved with modern dentistry and gentle care.</p>
     </div>
 
-    <!-- REAL RESULTS: DESKTOP GRID / MOBILE SLIDER -->
-    <div class="work-showcase reveal" id="workShowcase">
-      <!-- 01 Comprehensive Smile Transformation -->
-      <article class="work-card work-slide active" data-work-slide="0" role="group" aria-roledescription="slide"
-        aria-label="Outcome 1 of 10: Comprehensive Smile Transformation">
-        <div class="work-card-img-wrap">
-          <picture>
-            <source
-              srcset="./Image/outcome-1-500w.webp 500w, ./Image/outcome-1-900w.webp 900w, ./Image/outcome-1.webp 1200w"
-              sizes="(max-width: 850px) 90vw, 30vw" type="image/webp">
-            <img src="./Image/outcome-1-900w.webp" alt="Shanthi Dental Care - Comprehensive Smile Transformation"
-              class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
-          </picture>
-        </div>
-      </article>
+    <!-- SUBSECTION 01: CLINICAL SMILE TRANSFORMATIONS (Original Showcase) -->
+    <div class="work-group reveal">
+      <div class="work-group-header">
+        <div class="work-group-tag">✦ Smile Transformations &amp; Aesthetic Outcomes </div>
+      </div>
 
-      <!-- 02 Precision Orthodontic Alignment -->
-      <article class="work-card work-slide" data-work-slide="1" role="group" aria-roledescription="slide"
-        aria-label="Outcome 2 of 10: Precision Orthodontic Alignment">
-        <div class="work-card-img-wrap">
-          <picture>
-            <source
-              srcset="./Image/outcome-2-500w.webp 500w, ./Image/outcome-2-900w.webp 900w, ./Image/outcome-2.webp 1200w"
-              sizes="(max-width: 850px) 90vw, 30vw" type="image/webp">
-            <img src="./Image/outcome-2-900w.webp" alt="Shanthi Dental Care - Precision Orthodontic Alignment"
-              class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
-          </picture>
-        </div>
-      </article>
+      <div class="work-showcase" id="workShowcaseSmile">
+        <!-- 01 Comprehensive Smile Transformation -->
+        <article class="work-card work-slide active" data-work-slide="0" role="group" aria-roledescription="slide"
+          aria-label="Smile Outcome 1 of 6: Comprehensive Smile Transformation">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source
+                srcset="./Image/outcome-1-500w.webp 500w, ./Image/outcome-1-900w.webp 900w, ./Image/outcome-1.webp 1200w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/outcome-1-900w.webp" alt="Shanthi Dental Care - Comprehensive Smile Transformation"
+                class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
 
-      <!-- 03 Aesthetic Crown & Bridge Restoration -->
-      <article class="work-card work-slide" data-work-slide="2" role="group" aria-roledescription="slide"
-        aria-label="Outcome 3 of 10: Aesthetic Crown & Bridge Restoration">
-        <div class="work-card-img-wrap">
-          <picture>
-            <source
-              srcset="./Image/outcome-3-500w.webp 500w, ./Image/outcome-3-900w.webp 900w, ./Image/outcome-3.webp 1200w"
-              sizes="(max-width: 850px) 90vw, 30vw" type="image/webp">
-            <img src="./Image/outcome-3-900w.webp" alt="Shanthi Dental Care - Aesthetic Crown & Bridge Restoration"
-              class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
-          </picture>
-        </div>
-      </article>
+        <!-- 02 Precision Orthodontic Alignment -->
+        <article class="work-card work-slide" data-work-slide="1" role="group" aria-roledescription="slide"
+          aria-label="Smile Outcome 2 of 6: Precision Orthodontic Alignment">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source
+                srcset="./Image/outcome-2-500w.webp 500w, ./Image/outcome-2-900w.webp 900w, ./Image/outcome-2.webp 1200w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/outcome-2-900w.webp" alt="Shanthi Dental Care - Precision Orthodontic Alignment"
+                class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
 
-      <!-- 04 Anterior Cosmetic Rehabilitation -->
-      <article class="work-card work-slide" data-work-slide="3" role="group" aria-roledescription="slide"
-        aria-label="Outcome 4 of 10: Anterior Cosmetic Rehabilitation">
-        <div class="work-card-img-wrap">
-          <picture>
-            <source
-              srcset="./Image/outcome-4-500w.webp 500w, ./Image/outcome-4-900w.webp 900w, ./Image/outcome-4.webp 1200w"
-              sizes="(max-width: 850px) 90vw, 30vw" type="image/webp">
-            <img src="./Image/outcome-4-900w.webp" alt="Shanthi Dental Care - Anterior Cosmetic Rehabilitation"
-              class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
-          </picture>
-        </div>
-      </article>
+        <!-- 03 Aesthetic Crown & Bridge Restoration -->
+        <article class="work-card work-slide" data-work-slide="2" role="group" aria-roledescription="slide"
+          aria-label="Smile Outcome 3 of 6: Aesthetic Crown & Bridge Restoration">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source
+                srcset="./Image/outcome-3-500w.webp 500w, ./Image/outcome-3-900w.webp 900w, ./Image/outcome-3.webp 1200w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/outcome-3-900w.webp" alt="Shanthi Dental Care - Aesthetic Crown & Bridge Restoration"
+                class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
 
-      <!-- 05 Endodontic & Structural Tooth Rescue -->
-      <article class="work-card work-slide" data-work-slide="4" role="group" aria-roledescription="slide"
-        aria-label="Outcome 5 of 10: Endodontic & Structural Tooth Rescue">
-        <div class="work-card-img-wrap">
-          <picture>
-            <source
-              srcset="./Image/outcome-5-500w.webp 500w, ./Image/outcome-5-900w.webp 900w, ./Image/outcome-5.webp 1200w"
-              sizes="(max-width: 850px) 90vw, 30vw" type="image/webp">
-            <img src="./Image/outcome-5-900w.webp" alt="Shanthi Dental Care - Endodontic & Structural Tooth Rescue"
-              class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
-          </picture>
-        </div>
-      </article>
+        <!-- 04 Anterior Cosmetic Rehabilitation -->
+        <article class="work-card work-slide" data-work-slide="3" role="group" aria-roledescription="slide"
+          aria-label="Smile Outcome 4 of 6: Anterior Cosmetic Rehabilitation">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source
+                srcset="./Image/outcome-4-500w.webp 500w, ./Image/outcome-4-900w.webp 900w, ./Image/outcome-4.webp 1200w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/outcome-4-900w.webp" alt="Shanthi Dental Care - Anterior Cosmetic Rehabilitation"
+                class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
 
-      <!-- 06 Full Arch Restorative & Smile Design -->
-      <article class="work-card work-slide" data-work-slide="5" role="group" aria-roledescription="slide"
-        aria-label="Outcome 6 of 10: Full Arch Restorative & Smile Design">
-        <div class="work-card-img-wrap">
-          <picture>
-            <source
-              srcset="./Image/outcome-6-500w.webp 500w, ./Image/outcome-6-900w.webp 900w, ./Image/outcome-6.webp 1200w"
-              sizes="(max-width: 850px) 90vw, 30vw" type="image/webp">
-            <img src="./Image/outcome-6-900w.webp" alt="Shanthi Dental Care - Full Arch Restorative & Smile Design"
-              class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
-          </picture>
-        </div>
-      </article>
+        <!-- 05 Endodontic & Structural Tooth Rescue -->
+        <article class="work-card work-slide" data-work-slide="4" role="group" aria-roledescription="slide"
+          aria-label="Smile Outcome 5 of 6: Endodontic & Structural Tooth Rescue">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source
+                srcset="./Image/outcome-5-500w.webp 500w, ./Image/outcome-5-900w.webp 900w, ./Image/outcome-5.webp 1200w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/outcome-5-900w.webp" alt="Shanthi Dental Care - Endodontic & Structural Tooth Rescue"
+                class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
 
-      <!-- 07 Endodontic Root Canal & Crown Restoration -->
-      <article class="work-card work-slide" data-work-slide="6" role="group" aria-roledescription="slide"
-        aria-label="Outcome 7 of 10: Endodontic Root Canal & Crown Restoration">
-        <div class="work-card-img-wrap">
-          <picture>
-            <source
-              srcset="./Image/new1-500w.webp 500w, ./Image/new1-900w.webp 900w, ./Image/new1.webp 1000w"
-              sizes="(max-width: 850px) 90vw, 30vw" type="image/webp">
-            <img src="./Image/new1.jpg" alt="Shanthi Dental Care - Endodontic Root Canal & Crown Restoration Radiograph"
-              class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
-          </picture>
-        </div>
-      </article>
+        <!-- 06 Full Arch Restorative & Smile Design -->
+        <article class="work-card work-slide" data-work-slide="5" role="group" aria-roledescription="slide"
+          aria-label="Smile Outcome 6 of 6: Full Arch Restorative & Smile Design">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source
+                srcset="./Image/outcome-6-500w.webp 500w, ./Image/outcome-6-900w.webp 900w, ./Image/outcome-6.webp 1200w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/outcome-6-900w.webp" alt="Shanthi Dental Care - Full Arch Restorative & Smile Design"
+                class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
 
-      <!-- 08 Diagnostic Digital Radiography -->
-      <article class="work-card work-slide" data-work-slide="7" role="group" aria-roledescription="slide"
-        aria-label="Outcome 8 of 10: Diagnostic Digital Radiography">
-        <div class="work-card-img-wrap">
-          <picture>
-            <source
-              srcset="./Image/new2-500w.webp 500w, ./Image/new2-900w.webp 900w, ./Image/new2.webp 1000w"
-              sizes="(max-width: 850px) 90vw, 30vw" type="image/webp">
-            <img src="./Image/new2.jpg" alt="Shanthi Dental Care - Pre-Treatment Diagnostic Digital Radiography"
-              class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
-          </picture>
-        </div>
-      </article>
+        <!-- Mobile Navigation Arrows (Visible only on mobile) -->
+        <button class="work-nav-btn prev" id="workSmilePrev" aria-label="Previous smile outcome">‹</button>
+        <button class="work-nav-btn next" id="workSmileNext" aria-label="Next smile outcome">›</button>
+      </div>
+    </div>
 
-      <!-- 09 Precision Anterior Root Canal Obturation -->
-      <article class="work-card work-slide" data-work-slide="8" role="group" aria-roledescription="slide"
-        aria-label="Outcome 9 of 10: Precision Anterior Root Canal Obturation">
-        <div class="work-card-img-wrap">
-          <picture>
-            <source
-              srcset="./Image/new3-500w.webp 500w, ./Image/new3-900w.webp 900w, ./Image/new3.webp 1000w"
-              sizes="(max-width: 850px) 90vw, 30vw" type="image/webp">
-            <img src="./Image/new3.jpg" alt="Shanthi Dental Care - Precision Anterior Root Canal Obturation Radiograph"
-              class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
-          </picture>
-        </div>
-      </article>
+    <!-- SUBSECTION 02: DIGITAL RADIOGRAPHY & ENDODONTICS (New Cases) -->
+    <div class="work-group reveal">
+      <div class="work-group-header">
+        <div class="work-group-tag">✦ Diagnostic Showcase 02</div>
+      </div>
 
-      <!-- 10 Periapical Endodontic Diagnostic Assessment -->
-      <article class="work-card work-slide" data-work-slide="9" role="group" aria-roledescription="slide"
-        aria-label="Outcome 10 of 10: Periapical Endodontic Diagnostic Assessment">
-        <div class="work-card-img-wrap">
-          <picture>
-            <source
-              srcset="./Image/new4-500w.webp 500w, ./Image/new4-900w.webp 900w, ./Image/new4.webp 1000w"
-              sizes="(max-width: 850px) 90vw, 30vw" type="image/webp">
-            <img src="./Image/new4.jpg" alt="Shanthi Dental Care - Periapical Endodontic Diagnostic Assessment Radiograph"
-              class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
-          </picture>
-        </div>
-      </article>
+      <div class="work-showcase" id="workShowcaseRadio">
+        <!-- 01 Endodontic Root Canal & Crown Restoration -->
+        <article class="work-card work-slide active" data-work-slide="0" role="group" aria-roledescription="slide"
+          aria-label="Radiograph Outcome 1 of 8: Endodontic Root Canal & Crown Restoration">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source srcset="./Image/new1-500w.webp 500w, ./Image/new1-900w.webp 900w, ./Image/new1.webp 1000w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/new1.jpg"
+                alt="Shanthi Dental Care - Endodontic Root Canal & Crown Restoration Radiograph" class="work-card-img"
+                width="1000" height="1500" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
 
-      <!-- Mobile Navigation Arrows (Visible only on mobile) -->
-      <button class="work-nav-btn prev" id="workPrev" aria-label="Previous outcome">‹</button>
-      <button class="work-nav-btn next" id="workNext" aria-label="Next outcome">›</button>
+        <!-- 02 Diagnostic Digital Radiography -->
+        <article class="work-card work-slide" data-work-slide="1" role="group" aria-roledescription="slide"
+          aria-label="Radiograph Outcome 2 of 8: Diagnostic Digital Radiography">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source srcset="./Image/new2-500w.webp 500w, ./Image/new2-900w.webp 900w, ./Image/new2.webp 1000w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/new2.jpg" alt="Shanthi Dental Care - Pre-Treatment Diagnostic Digital Radiography"
+                class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
+
+        <!-- 03 Precision Anterior Root Canal Obturation -->
+        <article class="work-card work-slide" data-work-slide="2" role="group" aria-roledescription="slide"
+          aria-label="Radiograph Outcome 3 of 8: Precision Anterior Root Canal Obturation">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source srcset="./Image/new3-500w.webp 500w, ./Image/new3-900w.webp 900w, ./Image/new3.webp 1000w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/new3.jpg"
+                alt="Shanthi Dental Care - Precision Anterior Root Canal Obturation Radiograph" class="work-card-img"
+                width="1000" height="1500" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
+
+        <!-- 04 Periapical Endodontic Diagnostic Assessment -->
+        <article class="work-card work-slide" data-work-slide="3" role="group" aria-roledescription="slide"
+          aria-label="Radiograph Outcome 4 of 8: Periapical Endodontic Diagnostic Assessment">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source srcset="./Image/new4-500w.webp 500w, ./Image/new4-900w.webp 900w, ./Image/new4.webp 1000w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/new4.jpg"
+                alt="Shanthi Dental Care - Periapical Endodontic Diagnostic Assessment Radiograph" class="work-card-img"
+                width="1000" height="1500" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
+
+        <!-- 05 Endodontic Root Canal & Multi-Root Restoration -->
+        <article class="work-card work-slide" data-work-slide="4" role="group" aria-roledescription="slide"
+          aria-label="Radiograph Outcome 5 of 8: Endodontic Root Canal & Multi-Root Restoration">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source srcset="./Image/new5-500w.webp 500w, ./Image/new5-900w.webp 900w, ./Image/new5.webp 1000w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/new5.jpeg"
+                alt="Shanthi Dental Care - Endodontic Root Canal & Multi-Root Restoration Radiograph"
+                class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
+
+        <!-- 06 High-Resolution Pulpal Pathology Diagnostics -->
+        <article class="work-card work-slide" data-work-slide="5" role="group" aria-roledescription="slide"
+          aria-label="Radiograph Outcome 6 of 8: High-Resolution Pulpal Pathology Diagnostics">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source srcset="./Image/new6-500w.webp 500w, ./Image/new6-900w.webp 900w, ./Image/new6.webp 1000w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/new6.jpg"
+                alt="Shanthi Dental Care - High-Resolution Pulpal Pathology Diagnostics Radiograph"
+                class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
+
+        <!-- 07 Anterior Endodontic Therapy & Apex Seal -->
+        <article class="work-card work-slide" data-work-slide="6" role="group" aria-roledescription="slide"
+          aria-label="Radiograph Outcome 7 of 8: Anterior Endodontic Therapy & Apex Seal">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source srcset="./Image/new7-500w.webp 500w, ./Image/new7-900w.webp 900w, ./Image/new7.webp 1000w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/new7.jpg" alt="Shanthi Dental Care - Anterior Endodontic Therapy & Apex Seal Radiograph"
+                class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
+
+        <!-- 08 Diagnostic Periapical Evaluation & Bone Health -->
+        <article class="work-card work-slide" data-work-slide="7" role="group" aria-roledescription="slide"
+          aria-label="Radiograph Outcome 8 of 8: Diagnostic Periapical Evaluation & Bone Health">
+          <div class="work-card-img-wrap">
+            <picture>
+              <source srcset="./Image/new8-500w.webp 500w, ./Image/new8-900w.webp 900w, ./Image/new8.webp 1000w"
+                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
+              <img src="./Image/new8.jpg"
+                alt="Shanthi Dental Care - Diagnostic Periapical Evaluation & Bone Health Radiograph"
+                class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </article>
+
+        <!-- Mobile Navigation Arrows (Visible only on mobile) -->
+        <button class="work-nav-btn prev" id="workRadioPrev" aria-label="Previous radiograph outcome">‹</button>
+        <button class="work-nav-btn next" id="workRadioNext" aria-label="Next radiograph outcome">›</button>
+      </div>
     </div>
   </section>
 
@@ -3351,97 +3493,100 @@
     startAboutAutoSlide();
 
     /* ==========================================
-       SECTION 03: REAL RESULTS MOBILE SLIDER
+       SECTION 03: REAL RESULTS MOBILE SLIDERS (Smile & Radiography)
        ========================================== */
-    const workSlides = document.querySelectorAll('#workShowcase .work-slide');
-    const workPrevBtn = document.getElementById('workPrev');
-    const workNextBtn = document.getElementById('workNext');
-    let currentWorkIndex = 0;
-    let workAutoTimer = null;
-    const WORK_SLIDE_DURATION = 5000;
-
-    function isWorkMobile() {
-      return window.innerWidth <= 850;
-    }
-
-    function activateWorkSlide(index) {
-      if (!workSlides.length || !isWorkMobile()) return;
-      if (index < 0) index = workSlides.length - 1;
-      if (index >= workSlides.length) index = 0;
-      currentWorkIndex = index;
-
-      workSlides.forEach((slide, i) => {
-        const isActive = i === currentWorkIndex;
-        slide.classList.toggle('active', isActive);
-        slide.setAttribute('aria-hidden', !isActive);
-      });
-    }
-
-    function startWorkAutoSlide() {
-      if (workAutoTimer) clearInterval(workAutoTimer);
-      if (!isWorkMobile()) return;
-      activateWorkSlide(currentWorkIndex);
-      workAutoTimer = setInterval(() => {
-        if (isWorkMobile()) {
-          activateWorkSlide((currentWorkIndex + 1) % workSlides.length);
-        }
-      }, WORK_SLIDE_DURATION);
-    }
-
-    if (workPrevBtn) {
-      workPrevBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (workAutoTimer) clearInterval(workAutoTimer);
-        activateWorkSlide(currentWorkIndex - 1);
-        startWorkAutoSlide();
-      });
-    }
-
-    if (workNextBtn) {
-      workNextBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (workAutoTimer) clearInterval(workAutoTimer);
-        activateWorkSlide(currentWorkIndex + 1);
-        startWorkAutoSlide();
-      });
-    }
-
-    // Touch Swipe for Mobile Showcase
-    (function () {
-      const showcase = document.getElementById('workShowcase');
+    function initWorkShowcase(containerId, prevBtnId, nextBtnId) {
+      const showcase = document.getElementById(containerId);
       if (!showcase) return;
+      const slides = showcase.querySelectorAll('.work-slide');
+      const prevBtn = document.getElementById(prevBtnId);
+      const nextBtn = document.getElementById(nextBtnId);
+      let currentIndex = 0;
+      let autoTimer = null;
+      const DURATION = 5000;
+
+      function isMobile() {
+        return window.innerWidth <= 850;
+      }
+
+      function activate(index) {
+        if (!slides.length || !isMobile()) return;
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        currentIndex = index;
+
+        slides.forEach((slide, i) => {
+          const isActive = i === currentIndex;
+          slide.classList.toggle('active', isActive);
+          slide.setAttribute('aria-hidden', !isActive);
+        });
+      }
+
+      function startAuto() {
+        if (autoTimer) clearInterval(autoTimer);
+        if (!isMobile()) return;
+        activate(currentIndex);
+        autoTimer = setInterval(() => {
+          if (isMobile()) {
+            activate((currentIndex + 1) % slides.length);
+          }
+        }, DURATION);
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (autoTimer) clearInterval(autoTimer);
+          activate(currentIndex - 1);
+          startAuto();
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (autoTimer) clearInterval(autoTimer);
+          activate(currentIndex + 1);
+          startAuto();
+        });
+      }
+
+      // Touch Swipe for Mobile Showcase
       let sTouchStart = 0;
       showcase.addEventListener('touchstart', (e) => {
-        if (!isWorkMobile()) return;
+        if (!isMobile()) return;
         sTouchStart = e.changedTouches[0].screenX;
       }, { passive: true });
 
       showcase.addEventListener('touchend', (e) => {
-        if (!isWorkMobile()) return;
+        if (!isMobile()) return;
         const diff = e.changedTouches[0].screenX - sTouchStart;
         if (Math.abs(diff) > 35) {
-          if (workAutoTimer) clearInterval(workAutoTimer);
+          if (autoTimer) clearInterval(autoTimer);
           if (diff > 0) {
-            activateWorkSlide(currentWorkIndex - 1);
+            activate(currentIndex - 1);
           } else {
-            activateWorkSlide(currentWorkIndex + 1);
+            activate(currentIndex + 1);
           }
-          startWorkAutoSlide();
+          startAuto();
         }
       }, { passive: true });
-    }());
 
-    window.addEventListener('resize', () => {
-      if (isWorkMobile()) {
-        startWorkAutoSlide();
-      } else {
-        if (workAutoTimer) clearInterval(workAutoTimer);
+      window.addEventListener('resize', () => {
+        if (isMobile()) {
+          startAuto();
+        } else {
+          if (autoTimer) clearInterval(autoTimer);
+        }
+      }, { passive: true });
+
+      if (isMobile()) {
+        startAuto();
       }
-    }, { passive: true });
-
-    if (isWorkMobile()) {
-      startWorkAutoSlide();
     }
+
+    initWorkShowcase('workShowcaseSmile', 'workSmilePrev', 'workSmileNext');
+    initWorkShowcase('workShowcaseRadio', 'workRadioPrev', 'workRadioNext');
 
     /* ── Treatment card mobile tap-to-reveal ── */
     (function () {
