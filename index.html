@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shanthi Dental Care — Dr. G. Jaganraj, B.D.S | Lead Dentist in Kundrathur, Chennai</title>
   <meta name="description"
-    content="Shanthi Dental Care in Kundrathur, Chennai. Dr. G. Jaganraj, BDS (8+ Years Clinical Experience) provides ethical, gentle dental care: implants, braces, root canals, teeth cleaning, smile designing & full mouth rehabilitation.">
+    content="Shanthi Dental Care in Kundrathur, Chennai. Dr.G.Jaganraj,BDS, (8+ Years Clinical Experience) provides ethical, gentle dental care: implants, braces, root canals, teeth cleaning, smile designing & full mouth rehabilitation.">
   <meta name="keywords"
     content="Shanthi Dental Care, Dr G Jaganraj BDS, Dentist Kundrathur, Dental Clinic Nandambakkam, Dental Implants Chennai, Root Canal Specialist Kundrathur, Teeth Cleaning, Braces, Smile Designing, Clear Aligners Chennai">
-  <meta name="author" content="Dr. G. Jaganraj, BDS - Shanthi Dental Care">
+  <meta name="author" content="Dr.G.Jaganraj,BDS, - Shanthi Dental Care">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#304c29">
   <link rel="canonical" href="https://shanthidentalcare.com/">
@@ -315,11 +315,10 @@
     }
 
     .eyebrow-label {
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 700;
       letter-spacing: 0.22em;
       color: #2b4526;
-      text-transform: uppercase;
       font-family: "DM Sans", sans-serif;
     }
 
@@ -1651,6 +1650,45 @@
 
       .section {
         padding: 80px 5%;
+        content-visibility: visible !important;
+        contain-intrinsic-size: none !important;
+      }
+
+      /* Footer Tablet / Medium Screen Rules */
+      footer {
+        padding: 48px 6% calc(85px + env(safe-area-inset-bottom, 20px));
+        background: #23351f;
+        position: relative;
+        z-index: 10;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        box-sizing: border-box;
+        width: 100%;
+        clear: both;
+      }
+
+      .footer {
+        display: block;
+        width: 100%;
+        padding-bottom: 24px;
+      }
+
+      .footer p {
+        font-size: 12.5px;
+        line-height: 1.65;
+        color: #cfdbce;
+      }
+
+      .copy {
+        display: block;
+        visibility: visible;
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        padding-top: 16px;
+        color: #94a38e;
+        font-size: 11px;
+        line-height: 1.5;
       }
 
       .nav {
@@ -1742,6 +1780,31 @@
       .cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 14px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-img-wrap {
+        border-radius: 15px;
+        overflow: hidden;
+        background: rgba(48, 76, 41, 0.04);
+        width: 100%;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;
+        object-fit: cover;
+        border-radius: 15px;
+        display: block;
+      }
+
+      .card-content {
+        flex-grow: 1;
       }
 
       /* Section 03: Mobile Slider View */
@@ -2084,7 +2147,7 @@
         font-size: 10px;
       }
 
-      /* Section 02: Treatments (Single Clean Column for Mobile) */
+      /* Section 02: Treatments (Single Clean Column for Mobile - Preserves Full Before/After Clinical Images) */
       .cards {
         grid-template-columns: 1fr;
         gap: 14px;
@@ -2093,11 +2156,24 @@
       .card {
         border-radius: 18px;
         padding: 8px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-img-wrap {
+        border-radius: 14px;
+        overflow: hidden;
+        background: rgba(48, 76, 41, 0.04);
+        width: 100%;
       }
 
       .card img {
-        height: 190px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;
+        object-fit: cover;
         border-radius: 14px;
+        display: block;
       }
 
       .card-content {
@@ -2142,9 +2218,51 @@
         font-size: 13.5px;
       }
 
-      /* Footer */
+      /* Section visibility guarantee on mobile */
+      .section {
+        content-visibility: visible !important;
+        contain-intrinsic-size: none !important;
+      }
+
+      /* Footer Mobile Optimization */
       footer {
-        padding: 40px 5% 20px;
+        padding: 42px 6% calc(95px + env(safe-area-inset-bottom, 24px)) !important;
+        background: #23351f !important;
+        position: relative !important;
+        z-index: 10 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        clear: both !important;
+      }
+
+      .footer {
+        display: block !important;
+        width: 100% !important;
+        padding-bottom: 22px !important;
+      }
+
+      .footer .logo img {
+        height: 50px !important;
+      }
+
+      .footer p {
+        font-size: 12.5px !important;
+        line-height: 1.65 !important;
+        color: #cfdbce !important;
+      }
+
+      .copy {
+        display: block !important;
+        visibility: visible !important;
+        width: 100% !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+        padding-top: 16px !important;
+        color: #94a38e !important;
+        font-size: 11px !important;
+        line-height: 1.5 !important;
       }
 
       .chatbox {
@@ -2316,7 +2434,7 @@
         <!-- Eyebrow with side lines -->
         <div class="hero-eyebrow-line">
           <span class="eyebrow-rule"></span>
-          <span class="eyebrow-label">DR. G. JAGANRAJ, BDS</span>
+          <span class="eyebrow-label">Dr.G.JAGANRAJ,BDS,</span>
           <span class="eyebrow-rule"></span>
         </div>
 
@@ -2468,7 +2586,7 @@
 
         <div class="doctor-profile">
           <div>
-            <h3>Dr. G. JAGANRAJ, BDS </h3>
+            <h3>Dr.G.JAGANRAJ,BDS,</h3>
             <div class="dr-subtitle">General Dentist | 8+ Years of Clinical Experience</div>
           </div>
         </div>
@@ -2609,7 +2727,7 @@
       <!-- 08 Tooth Coloured Fillings -->
       <article class="card reveal" tabindex="0" aria-label="Tooth Coloured Fillings. Tap to learn more.">
         <div class="card-img-wrap">
-          <img src="./Image/treatment-fillings.webp" alt="Tooth Coloured Fillings" loading="lazy" decoding="async"
+          <img src="./Image/treatment-fillings-orig.png" alt="Tooth Coloured Fillings" loading="lazy" decoding="async"
             width="1200" height="900">
           <div class="card-extra" aria-hidden="true">
             <span class="card-extra-text">Natural-looking fillings repair cavities while blending
@@ -2625,7 +2743,7 @@
       <!-- 09 Smile Designing -->
       <article class="card reveal" tabindex="0" aria-label="Smile Designing. Tap to learn more.">
         <div class="card-img-wrap">
-          <img src="./Image/treatment-smile.webp" alt="Smile Designing" loading="lazy" decoding="async" width="900"
+          <img src="./Image/treatment-smile-orig.png" alt="Smile Designing" loading="lazy" decoding="async" width="900"
             height="900">
           <div class="card-extra" aria-hidden="true">
             <span class="card-extra-text">Personalized cosmetic treatment planning to create
@@ -2641,7 +2759,7 @@
       <!-- 10 Full Mouth Rehabilitation -->
       <article class="card reveal" tabindex="0" aria-label="Full Mouth Rehabilitation. Tap to learn more.">
         <div class="card-img-wrap">
-          <img src="./Image/treatment-fullmouth.webp" alt="Full Mouth Rehabilitation" loading="lazy" decoding="async"
+          <img src="./Image/treatment-fullmouth-orig.png" alt="Full Mouth Rehabilitation" loading="lazy" decoding="async"
             width="736" height="890">
           <div class="card-extra" aria-hidden="true">
             <span class="card-extra-text">Comprehensive treatment combining multiple procedures
@@ -2692,7 +2810,7 @@
       <div class="work-showcase" id="workShowcaseSmile">
         <!-- 01 Comprehensive Smile Transformation -->
         <article class="work-card work-slide active" data-work-slide="0" role="group" aria-roledescription="slide"
-          aria-label="Smile Outcome 1 of 6: Comprehensive Smile Transformation">
+          aria-label="Smile Outcome 1 of 10: Comprehensive Smile Transformation">
           <div class="work-card-img-wrap">
             <picture>
               <source
@@ -2706,7 +2824,7 @@
 
         <!-- 02 Precision Orthodontic Alignment -->
         <article class="work-card work-slide" data-work-slide="1" role="group" aria-roledescription="slide"
-          aria-label="Smile Outcome 2 of 6: Precision Orthodontic Alignment">
+          aria-label="Smile Outcome 2 of 10: Precision Orthodontic Alignment">
           <div class="work-card-img-wrap">
             <picture>
               <source
@@ -2720,7 +2838,7 @@
 
         <!-- 03 Aesthetic Crown & Bridge Restoration -->
         <article class="work-card work-slide" data-work-slide="2" role="group" aria-roledescription="slide"
-          aria-label="Smile Outcome 3 of 6: Aesthetic Crown & Bridge Restoration">
+          aria-label="Smile Outcome 3 of 10: Aesthetic Crown & Bridge Restoration">
           <div class="work-card-img-wrap">
             <picture>
               <source
@@ -2734,7 +2852,7 @@
 
         <!-- 04 Anterior Cosmetic Rehabilitation -->
         <article class="work-card work-slide" data-work-slide="3" role="group" aria-roledescription="slide"
-          aria-label="Smile Outcome 4 of 6: Anterior Cosmetic Rehabilitation">
+          aria-label="Smile Outcome 4 of 10: Anterior Cosmetic Rehabilitation">
           <div class="work-card-img-wrap">
             <picture>
               <source
@@ -2748,7 +2866,7 @@
 
         <!-- 05 Endodontic & Structural Tooth Rescue -->
         <article class="work-card work-slide" data-work-slide="4" role="group" aria-roledescription="slide"
-          aria-label="Smile Outcome 5 of 6: Endodontic & Structural Tooth Rescue">
+          aria-label="Smile Outcome 5 of 10: Endodontic & Structural Tooth Rescue">
           <div class="work-card-img-wrap">
             <picture>
               <source
@@ -2762,7 +2880,7 @@
 
         <!-- 06 Full Arch Restorative & Smile Design -->
         <article class="work-card work-slide" data-work-slide="5" role="group" aria-roledescription="slide"
-          aria-label="Smile Outcome 6 of 6: Full Arch Restorative & Smile Design">
+          aria-label="Smile Outcome 6 of 10: Full Arch Restorative & Smile Design">
           <div class="work-card-img-wrap">
             <picture>
               <source
@@ -2774,134 +2892,48 @@
           </div>
         </article>
 
+        <!-- 07 Aesthetic Smile & Arch Rehabilitation -->
+        <article class="work-card work-slide" data-work-slide="6" role="group" aria-roledescription="slide"
+          aria-label="Smile Outcome 7 of 10: Aesthetic Smile & Arch Rehabilitation">
+          <div class="work-card-img-wrap">
+            <img src="./Image/new outcome 1.jpg" alt="Shanthi Dental Care - Aesthetic Smile & Arch Rehabilitation"
+              class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
+          </div>
+        </article>
+
+        <!-- 08 Full Mouth Restorative Rehabilitation -->
+        <article class="work-card work-slide" data-work-slide="7" role="group" aria-roledescription="slide"
+          aria-label="Smile Outcome 8 of 10: Full Mouth Restorative Rehabilitation">
+          <div class="work-card-img-wrap">
+            <img src="./Image/new outcome 2.jpg" alt="Shanthi Dental Care - Full Mouth Restorative Rehabilitation"
+              class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
+          </div>
+        </article>
+
+        <!-- 09 Endodontic Molar Restoration & Crown -->
+        <article class="work-card work-slide" data-work-slide="8" role="group" aria-roledescription="slide"
+          aria-label="Smile Outcome 9 of 10: Endodontic Molar Restoration & Crown">
+          <div class="work-card-img-wrap">
+            <img src="./Image/new outcome 3.jpg" alt="Shanthi Dental Care - Endodontic Molar Restoration & Crown"
+              class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
+          </div>
+        </article>
+
+        <!-- 10 Precision Endodontic Root Canal Therapy -->
+        <article class="work-card work-slide" data-work-slide="9" role="group" aria-roledescription="slide"
+          aria-label="Smile Outcome 10 of 10: Precision Endodontic Root Canal Therapy">
+          <div class="work-card-img-wrap">
+            <img src="./Image/new outcome 4.jpg" alt="Shanthi Dental Care - Precision Endodontic Root Canal Therapy"
+              class="work-card-img" width="900" height="900" loading="lazy" decoding="async">
+          </div>
+        </article>
+
         <!-- Mobile Navigation Arrows (Visible only on mobile) -->
         <button class="work-nav-btn prev" id="workSmilePrev" aria-label="Previous smile outcome">‹</button>
         <button class="work-nav-btn next" id="workSmileNext" aria-label="Next smile outcome">›</button>
       </div>
     </div>
 
-    <!-- SUBSECTION 02: DIGITAL RADIOGRAPHY & ENDODONTICS (New Cases) -->
-    <div class="work-group reveal">
-      <div class="work-group-header">
-        <div class="work-group-tag">✦ Diagnostic Showcase 02</div>
-      </div>
-
-      <div class="work-showcase" id="workShowcaseRadio">
-        <!-- 01 Endodontic Root Canal & Crown Restoration -->
-        <article class="work-card work-slide active" data-work-slide="0" role="group" aria-roledescription="slide"
-          aria-label="Radiograph Outcome 1 of 8: Endodontic Root Canal & Crown Restoration">
-          <div class="work-card-img-wrap">
-            <picture>
-              <source srcset="./Image/new1-500w.webp 500w, ./Image/new1-900w.webp 900w, ./Image/new1.webp 1000w"
-                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
-              <img src="./Image/new1.jpg"
-                alt="Shanthi Dental Care - Endodontic Root Canal & Crown Restoration Radiograph" class="work-card-img"
-                width="1000" height="1500" loading="lazy" decoding="async">
-            </picture>
-          </div>
-        </article>
-
-        <!-- 02 Diagnostic Digital Radiography -->
-        <article class="work-card work-slide" data-work-slide="1" role="group" aria-roledescription="slide"
-          aria-label="Radiograph Outcome 2 of 8: Diagnostic Digital Radiography">
-          <div class="work-card-img-wrap">
-            <picture>
-              <source srcset="./Image/new2-500w.webp 500w, ./Image/new2-900w.webp 900w, ./Image/new2.webp 1000w"
-                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
-              <img src="./Image/new2.jpg" alt="Shanthi Dental Care - Pre-Treatment Diagnostic Digital Radiography"
-                class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
-            </picture>
-          </div>
-        </article>
-
-        <!-- 03 Precision Anterior Root Canal Obturation -->
-        <article class="work-card work-slide" data-work-slide="2" role="group" aria-roledescription="slide"
-          aria-label="Radiograph Outcome 3 of 8: Precision Anterior Root Canal Obturation">
-          <div class="work-card-img-wrap">
-            <picture>
-              <source srcset="./Image/new3-500w.webp 500w, ./Image/new3-900w.webp 900w, ./Image/new3.webp 1000w"
-                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
-              <img src="./Image/new3.jpg"
-                alt="Shanthi Dental Care - Precision Anterior Root Canal Obturation Radiograph" class="work-card-img"
-                width="1000" height="1500" loading="lazy" decoding="async">
-            </picture>
-          </div>
-        </article>
-
-        <!-- 04 Periapical Endodontic Diagnostic Assessment -->
-        <article class="work-card work-slide" data-work-slide="3" role="group" aria-roledescription="slide"
-          aria-label="Radiograph Outcome 4 of 8: Periapical Endodontic Diagnostic Assessment">
-          <div class="work-card-img-wrap">
-            <picture>
-              <source srcset="./Image/new4-500w.webp 500w, ./Image/new4-900w.webp 900w, ./Image/new4.webp 1000w"
-                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
-              <img src="./Image/new4.jpg"
-                alt="Shanthi Dental Care - Periapical Endodontic Diagnostic Assessment Radiograph" class="work-card-img"
-                width="1000" height="1500" loading="lazy" decoding="async">
-            </picture>
-          </div>
-        </article>
-
-        <!-- 05 Endodontic Root Canal & Multi-Root Restoration -->
-        <article class="work-card work-slide" data-work-slide="4" role="group" aria-roledescription="slide"
-          aria-label="Radiograph Outcome 5 of 8: Endodontic Root Canal & Multi-Root Restoration">
-          <div class="work-card-img-wrap">
-            <picture>
-              <source srcset="./Image/new5-500w.webp 500w, ./Image/new5-900w.webp 900w, ./Image/new5.webp 1000w"
-                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
-              <img src="./Image/new5.jpeg"
-                alt="Shanthi Dental Care - Endodontic Root Canal & Multi-Root Restoration Radiograph"
-                class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
-            </picture>
-          </div>
-        </article>
-
-        <!-- 06 High-Resolution Pulpal Pathology Diagnostics -->
-        <article class="work-card work-slide" data-work-slide="5" role="group" aria-roledescription="slide"
-          aria-label="Radiograph Outcome 6 of 8: High-Resolution Pulpal Pathology Diagnostics">
-          <div class="work-card-img-wrap">
-            <picture>
-              <source srcset="./Image/new6-500w.webp 500w, ./Image/new6-900w.webp 900w, ./Image/new6.webp 1000w"
-                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
-              <img src="./Image/new6.jpg"
-                alt="Shanthi Dental Care - High-Resolution Pulpal Pathology Diagnostics Radiograph"
-                class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
-            </picture>
-          </div>
-        </article>
-
-        <!-- 07 Anterior Endodontic Therapy & Apex Seal -->
-        <article class="work-card work-slide" data-work-slide="6" role="group" aria-roledescription="slide"
-          aria-label="Radiograph Outcome 7 of 8: Anterior Endodontic Therapy & Apex Seal">
-          <div class="work-card-img-wrap">
-            <picture>
-              <source srcset="./Image/new7-500w.webp 500w, ./Image/new7-900w.webp 900w, ./Image/new7.webp 1000w"
-                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
-              <img src="./Image/new7.jpg" alt="Shanthi Dental Care - Anterior Endodontic Therapy & Apex Seal Radiograph"
-                class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
-            </picture>
-          </div>
-        </article>
-
-        <!-- 08 Diagnostic Periapical Evaluation & Bone Health -->
-        <article class="work-card work-slide" data-work-slide="7" role="group" aria-roledescription="slide"
-          aria-label="Radiograph Outcome 8 of 8: Diagnostic Periapical Evaluation & Bone Health">
-          <div class="work-card-img-wrap">
-            <picture>
-              <source srcset="./Image/new8-500w.webp 500w, ./Image/new8-900w.webp 900w, ./Image/new8.webp 1000w"
-                sizes="(max-width: 850px) 90vw, (max-width: 1024px) 30vw, 22vw" type="image/webp">
-              <img src="./Image/new8.jpg"
-                alt="Shanthi Dental Care - Diagnostic Periapical Evaluation & Bone Health Radiograph"
-                class="work-card-img" width="1000" height="1500" loading="lazy" decoding="async">
-            </picture>
-          </div>
-        </article>
-
-        <!-- Mobile Navigation Arrows (Visible only on mobile) -->
-        <button class="work-nav-btn prev" id="workRadioPrev" aria-label="Previous radiograph outcome">‹</button>
-        <button class="work-nav-btn next" id="workRadioNext" aria-label="Next radiograph outcome">›</button>
-      </div>
-    </div>
   </section>
 
   <!-- SECTION 05: CONTACT -->
@@ -3586,7 +3618,6 @@
     }
 
     initWorkShowcase('workShowcaseSmile', 'workSmilePrev', 'workSmileNext');
-    initWorkShowcase('workShowcaseRadio', 'workRadioPrev', 'workRadioNext');
 
     /* ── Treatment card mobile tap-to-reveal ── */
     (function () {
